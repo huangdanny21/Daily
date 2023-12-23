@@ -16,14 +16,34 @@ enum HomeSections {
 struct HomeView: View {
     var body: some View {
         VStack {
+
+            Spacer()
             HomeSearchBarView()
-            
+            Spacer()
             HomeCollectionView()
                 .frame(height: 150)
-            
+            Spacer()
             HomeTableView()
                 .frame(minHeight: 150)
+            Spacer()
+            HStack {
+                Button(action: {
+                    // Action for the new button at bottom-left
+                    // Add your functionality here
+                }) {
+                    Image(systemName: "plus.circle.fill")
+                        .font(.title)
+                        .padding()
+                }
+            Spacer()
+                   NavigationLink(destination: ListDetailView()) {
+                       Image(systemName: "list.bullet")
+                           .font(.title)
+                           .padding()
+                   }
+               }
         }
+        .padding()
     }
 }
 
@@ -49,11 +69,15 @@ struct HomeCollectionView: View {
     let items = (1...10).map { "Item \($0)" } // Replace with your data model
     
     var body: some View {
-        ScrollView(.vertical) {
-            LazyHStack {
+        ScrollView {
+            LazyVGrid(columns: [
+                GridItem(.flexible(), spacing: 10),
+                GridItem(.flexible(), spacing: 10)
+            ], spacing: 10) {
                 ForEach(items, id: \.self) { item in
                     Text(item)
                         .padding()
+                        .frame(minWidth: 0, maxWidth: .infinity)
                         .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(8)
@@ -63,6 +87,7 @@ struct HomeCollectionView: View {
         }
     }
 }
+
 
 struct HomeTableView: View {
     let data = (1...10).map { "Row \($0)" } // Replace with your data model
