@@ -9,16 +9,16 @@ import SwiftUI
 
 struct NewReminderView: View {
     @Environment(\.presentationMode) var presentationMode
-
+    
     @State private var isAddButtonEnabled = false
     @State private var title = ""
     @State private var description = ""
-
+    
     var body: some View {
         NavigationView {
             VStack {
                 Spacer()
-
+                
                 VStack(alignment: .center) {
                     Image(systemName: "photo") // Placeholder image
                         .resizable()
@@ -27,7 +27,7 @@ struct NewReminderView: View {
                         .padding()
                         .foregroundColor(.gray)
                         .border(Color.gray, width: 1)
-
+                    
                     TextField("Title", text: $title)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding()
@@ -38,7 +38,7 @@ struct NewReminderView: View {
                         .onChange(of: title) { newValue in
                             updateAddButtonState()
                         }
-
+                    
                     TextEditor(text: $description)
                         .frame(height: 100)
                         .padding()
@@ -50,17 +50,17 @@ struct NewReminderView: View {
                             updateAddButtonState()
                         }
                 }
-
+                
                 Spacer()
-
+                
                 HStack {
                     Button("Cancel") {
                         presentationMode.wrappedValue.dismiss()
                     }
                     .padding()
-
+                    
                     Spacer()
-
+                    
                 }
                 .padding(.horizontal)
             }
@@ -72,7 +72,7 @@ struct NewReminderView: View {
             }.disabled(!isAddButtonEnabled))
         }
     }
-
+    
     // MARK: - Private
     
     private func updateAddButtonState() {
