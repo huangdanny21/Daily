@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NewReminderView: View {
     @Environment(\.presentationMode) var presentationMode
+    @ObservedObject var remindersManager: RemindersManager
     
     @State private var isAddButtonEnabled = false
     @State private var title = ""
@@ -20,13 +21,7 @@ struct NewReminderView: View {
                 Spacer()
                 
                 VStack(alignment: .center) {
-                    Image(systemName: "photo") // Placeholder image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 200, height: 200)
-                        .padding()
-                        .foregroundColor(.gray)
-                        .border(Color.gray, width: 1)
+                    // Existing UI components
                     
                     TextField("Title", text: $title)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -61,22 +56,30 @@ struct NewReminderView: View {
                     
                     Spacer()
                     
+                    Button("Add") {
+                        addNewReminder()
+                        presentationMode.wrappedValue.dismiss()
+                    }
+                    .padding()
+                    .disabled(!isAddButtonEnabled)
                 }
                 .padding(.horizontal)
             }
             .navigationBarTitle("New Reminder")
             .navigationBarItems(leading: Button("Cancel") {
                 presentationMode.wrappedValue.dismiss()
-            }, trailing: Button("Add") {
-                // Perform action when Add button is tapped
-            }.disabled(!isAddButtonEnabled))
+            })
         }
     }
-    
-    // MARK: - Private
     
     private func updateAddButtonState() {
         // Enable Add button if the title field is not empty
         isAddButtonEnabled = !title.isEmpty
+    }
+    
+    private func addNewReminder() {
+        guard !title.isEmpty else { return }
+        let newReminder = "\(title): \(description)"
+        remindersManager.addReminder(newReminder)
     }
 }

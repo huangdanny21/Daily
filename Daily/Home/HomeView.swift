@@ -15,7 +15,7 @@ enum HomeSections {
 
 struct HomeView: View {
     @State private var showNewReminder = false
-    
+    @ObservedObject var remindersManager: RemindersManager // Assuming you have a RemindersManager to manage reminders
     var body: some View {
         VStack {
             Spacer()
@@ -30,7 +30,7 @@ struct HomeView: View {
             Text("Daily Task")
                 .font(.headline)
                 .padding(.horizontal)
-            HomeTableView()
+            HomeTableView(remindersManager: remindersManager)
                 .frame(minHeight: 150)
             Spacer()
             HStack {
@@ -52,7 +52,7 @@ struct HomeView: View {
             }
         }
         .sheet(isPresented: $showNewReminder, content: {
-            NewReminderView()
+            NewReminderView(remindersManager: remindersManager)
         })
         .padding()
         
@@ -61,7 +61,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(remindersManager: RemindersManager())
     }
 }
 
@@ -100,14 +100,4 @@ struct HomeCollectionView: View {
     }
 }
 
-
-struct HomeTableView: View {
-    let data = (1...10).map { "Row \($0)" } // Replace with your data model
-    
-    var body: some View {
-        List(data, id: \.self) { row in
-            Text(row)
-        }
-    }
-}
 
