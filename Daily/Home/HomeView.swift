@@ -14,9 +14,10 @@ enum HomeSections {
 }
 
 struct HomeView: View {
+    @State private var showNewReminder = false
+    
     var body: some View {
         VStack {
-
             Spacer()
             HomeSearchBarView()
             Spacer()
@@ -30,20 +31,25 @@ struct HomeView: View {
                 Button(action: {
                     // Action for the new button at bottom-left
                     // Add your functionality here
+                    showNewReminder.toggle()
                 }) {
                     Image(systemName: "plus.circle.fill")
                         .font(.title)
                         .padding()
                 }
-            Spacer()
-                   NavigationLink(destination: ListDetailView()) {
-                       Image(systemName: "list.bullet")
-                           .font(.title)
-                           .padding()
-                   }
-               }
+                Spacer()
+                NavigationLink(destination: ListDetailView()) {
+                    Image(systemName: "list.bullet")
+                        .font(.title)
+                        .padding()
+                }
+            }
         }
+        .sheet(isPresented: $showNewReminder, content: {
+            NewReminderView()
+        })
         .padding()
+        
     }
 }
 
@@ -55,7 +61,7 @@ struct HomeView_Previews: PreviewProvider {
 
 struct HomeSearchBarView: View {
     @State private var searchText = ""
-
+    
     var body: some View {
         VStack {
             TextField("Search", text: $searchText)
@@ -91,7 +97,7 @@ struct HomeCollectionView: View {
 
 struct HomeTableView: View {
     let data = (1...10).map { "Row \($0)" } // Replace with your data model
-
+    
     var body: some View {
         List(data, id: \.self) { row in
             Text(row)
