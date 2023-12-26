@@ -30,7 +30,7 @@ struct HomeView: View {
             Text("Daily Task")
                 .font(.headline)
                 .padding(.horizontal)
-            HomeTableView(remindersManager: remindersManager)
+            HomeTableView(remindersViewModel: RemindersViewModel())
                 .frame(minHeight: 150)
             Spacer()
             HStack {
@@ -52,7 +52,7 @@ struct HomeView: View {
             }
         }
         .sheet(isPresented: $showNewReminder, content: {
-            NewReminderView(remindersManager: remindersManager)
+            NewReminderView()
         })
         .navigationBarTitle("Home")
         .padding()
@@ -60,11 +60,11 @@ struct HomeView: View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView(remindersManager: RemindersManager())
-    }
-}
+//struct HomeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeView(remindersManager: RemindersManager())
+//    }
+//}
 
 
 

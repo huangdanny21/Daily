@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct HomeTableView: View {
-    @ObservedObject var remindersManager: RemindersManager // Assuming you have a RemindersManager to manage reminders
+    @ObservedObject var remindersViewModel: RemindersViewModel
     
     var body: some View {
         NavigationView {
             VStack {
-                List(remindersManager.reminders, id: \.self) { reminder in
+                List(remindersViewModel.reminders, id: \.self) { reminder in
                     VStack(alignment: .leading) {
                         Text(reminder)
                             .font(.headline)
@@ -23,7 +23,20 @@ struct HomeTableView: View {
                 }
                 .navigationBarTitle("Reminders")
             }
+            .onAppear {
+                // Fetch reminders from Firestore or local storage when the view appears
+                remindersViewModel.fetchReminders()
+                
+                // Setup a publisher to monitor changes in the reminders array
+                remindersViewModel.$reminders
+                    .sink { _ in
+                        // Do something when the reminders array changes
+                    }
+                    .store(in: &remindersViewModel.cancellables)
+            }
         }
     }
 }
+
+
 

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct NewReminderView: View {
     @Environment(\.presentationMode) var presentationMode
-    @ObservedObject var remindersManager: RemindersManager
-    
+    @ObservedObject var remindersViewModel: RemindersViewModel = RemindersViewModel()
+
     @State private var isAddButtonEnabled = false
     @State private var title = ""
     @State private var description = ""
@@ -50,9 +50,10 @@ struct NewReminderView: View {
                     presentationMode.wrappedValue.dismiss()
                 },
                 trailing: Button("Add") {
-                    addNewReminder()
+                    remindersViewModel.addReminder(title: title, description: description)
                     presentationMode.wrappedValue.dismiss()
-                }.disabled(!isAddButtonEnabled)
+                }.padding()
+                .disabled(!isAddButtonEnabled)
             )
         }
     }
@@ -62,9 +63,4 @@ struct NewReminderView: View {
         isAddButtonEnabled = !title.isEmpty
     }
     
-    private func addNewReminder() {
-        guard !title.isEmpty else { return }
-        let newReminder = "\(title): \(description)"
-        remindersManager.addReminder(newReminder)
-    }
 }
