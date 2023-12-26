@@ -39,6 +39,8 @@
 		B50328722B3A4A29007526D6 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50328712B3A4A29007526D6 /* HomeTableView.swift */; };
 		B50328742B3A51E1007526D6 /* HomeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50328732B3A51E1007526D6 /* HomeCollectionView.swift */; };
 		B50328762B3A5204007526D6 /* HomeSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50328752B3A5204007526D6 /* HomeSearchBarView.swift */; };
+		B50328792B3A5BAA007526D6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50328782B3A5BAA007526D6 /* LoginView.swift */; };
+		B503287C2B3A5EEC007526D6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503287B2B3A5EEC007526D6 /* SignUpView.swift */; };
 		B5C095FC2B36B233000EBB72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C095FB2B36B233000EBB72 /* AppDelegate.swift */; };
 		B5C095FE2B36B233000EBB72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C095FD2B36B233000EBB72 /* SceneDelegate.swift */; };
 		B5C096002B36B233000EBB72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C095FF2B36B233000EBB72 /* ViewController.swift */; };
@@ -77,6 +79,8 @@
 		B50328712B3A4A29007526D6 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		B50328732B3A51E1007526D6 /* HomeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionView.swift; sourceTree = "<group>"; };
 		B50328752B3A5204007526D6 /* HomeSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchBarView.swift; sourceTree = "<group>"; };
+		B50328782B3A5BAA007526D6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B503287B2B3A5EEC007526D6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		B5C095F82B36B233000EBB72 /* Daily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C095FB2B36B233000EBB72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5C095FD2B36B233000EBB72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +160,22 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		B50328772B3A5B67007526D6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B50328782B3A5BAA007526D6 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B503287A2B3A5EAB007526D6 /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				B503287B2B3A5EEC007526D6 /* SignUpView.swift */,
+			);
+			path = "Sign Up";
+			sourceTree = "<group>";
+		};
 		B5C095EF2B36B233000EBB72 = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +246,8 @@
 		B5C096302B36B6F4000EBB72 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				B503287A2B3A5EAB007526D6 /* Sign Up */,
+				B50328772B3A5B67007526D6 /* Login */,
 				B5C096342B36B85E000EBB72 /* New Reminder */,
 				B5C096312B36B6FA000EBB72 /* ListDetail */,
 			);
@@ -426,7 +448,9 @@
 				B5C096332B36B708000EBB72 /* ListDetailView.swift in Sources */,
 				B5C096362B36B86E000EBB72 /* NewReminderView.swift in Sources */,
 				B50328762B3A5204007526D6 /* HomeSearchBarView.swift in Sources */,
+				B50328792B3A5BAA007526D6 /* LoginView.swift in Sources */,
 				B5F61D432B3815E80045F133 /* DailyTask.swift in Sources */,
+				B503287C2B3A5EEC007526D6 /* SignUpView.swift in Sources */,
 				B50328702B3A3E57007526D6 /* RemindersManager.swift in Sources */,
 				B5C095FC2B36B233000EBB72 /* AppDelegate.swift in Sources */,
 				B5C095FE2B36B233000EBB72 /* SceneDelegate.swift in Sources */,
