@@ -18,18 +18,17 @@ struct NewReminderView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Spacer()
-                
-                VStack(alignment: .center) {
-                    // Existing UI components
+                VStack(alignment: .center, spacing: 20) {
+                    Image(systemName: "square.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 100, height: 100)
+                        .foregroundColor(.gray)
+                        .padding()
                     
                     TextField("Title", text: $title)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding()
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.blue, lineWidth: 1)
-                        )
                         .onChange(of: title) { newValue in
                             updateAddButtonState()
                         }
@@ -37,38 +36,24 @@ struct NewReminderView: View {
                     TextEditor(text: $description)
                         .frame(height: 100)
                         .padding()
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.green, lineWidth: 1)
-                        )
                         .onChange(of: description) { newValue in
                             updateAddButtonState()
                         }
                 }
+                .padding()
                 
                 Spacer()
-                
-                HStack {
-                    Button("Cancel") {
-                        presentationMode.wrappedValue.dismiss()
-                    }
-                    .padding()
-                    
-                    Spacer()
-                    
-                    Button("Add") {
-                        addNewReminder()
-                        presentationMode.wrappedValue.dismiss()
-                    }
-                    .padding()
-                    .disabled(!isAddButtonEnabled)
-                }
-                .padding(.horizontal)
             }
             .navigationBarTitle("New Reminder")
-            .navigationBarItems(leading: Button("Cancel") {
-                presentationMode.wrappedValue.dismiss()
-            })
+            .navigationBarItems(
+                leading: Button("Cancel") {
+                    presentationMode.wrappedValue.dismiss()
+                },
+                trailing: Button("Add") {
+                    addNewReminder()
+                    presentationMode.wrappedValue.dismiss()
+                }.disabled(!isAddButtonEnabled)
+            )
         }
     }
     
