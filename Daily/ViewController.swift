@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // Create a SwiftUI ContentView
-        let swiftUIView = HomeView(remindersManager: RemindersManager())
+        let swiftUIView = HomeView(remindersViewModel: RemindersViewModel())
         
         // Create a UIHostingController to embed SwiftUI content in UIKit
         let hostingController = UIHostingController(rootView: swiftUIView)

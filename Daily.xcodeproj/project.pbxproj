@@ -35,7 +35,6 @@
 		B50328692B3A3D00007526D6 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B50328682B3A3D00007526D6 /* FirebaseRemoteConfigSwift */; };
 		B503286B2B3A3D00007526D6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B503286A2B3A3D00007526D6 /* FirebaseStorage */; };
 		B503286D2B3A3D00007526D6 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = B503286C2B3A3D00007526D6 /* FirebaseStorageCombine-Community */; };
-		B50328702B3A3E57007526D6 /* RemindersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503286F2B3A3E57007526D6 /* RemindersManager.swift */; };
 		B50328722B3A4A29007526D6 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50328712B3A4A29007526D6 /* HomeTableView.swift */; };
 		B50328742B3A51E1007526D6 /* HomeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50328732B3A51E1007526D6 /* HomeCollectionView.swift */; };
 		B50328762B3A5204007526D6 /* HomeSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50328752B3A5204007526D6 /* HomeSearchBarView.swift */; };
@@ -76,7 +75,6 @@
 
 /* Begin PBXFileReference section */
 		B50328352B3A3C2C007526D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		B503286F2B3A3E57007526D6 /* RemindersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersManager.swift; sourceTree = "<group>"; };
 		B50328712B3A4A29007526D6 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		B50328732B3A51E1007526D6 /* HomeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionView.swift; sourceTree = "<group>"; };
 		B50328752B3A5204007526D6 /* HomeSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchBarView.swift; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 		B503286E2B3A3E3D007526D6 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				B503286F2B3A3E57007526D6 /* RemindersManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -454,7 +451,6 @@
 				B50328792B3A5BAA007526D6 /* LoginView.swift in Sources */,
 				B5F61D432B3815E80045F133 /* DailyTask.swift in Sources */,
 				B503287C2B3A5EEC007526D6 /* SignUpView.swift in Sources */,
-				B50328702B3A3E57007526D6 /* RemindersManager.swift in Sources */,
 				B5C095FC2B36B233000EBB72 /* AppDelegate.swift in Sources */,
 				B5C095FE2B36B233000EBB72 /* SceneDelegate.swift in Sources */,
 				B503287E2B3A61B9007526D6 /* RemindersViewModel.swift in Sources */,

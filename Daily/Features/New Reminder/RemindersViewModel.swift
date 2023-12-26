@@ -59,6 +59,7 @@ class RemindersViewModel: ObservableObject {
                 print("Error adding reminder: \(error.localizedDescription)")
             } else {
                 print("Reminder added to Firestore")
+                self.fetchReminders()
             }
         }
     }
