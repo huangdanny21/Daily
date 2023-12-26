@@ -54,6 +54,7 @@ struct HomeView: View {
         .sheet(isPresented: $showNewReminder, content: {
             NewReminderView(remindersManager: remindersManager)
         })
+        .navigationBarTitle("Home")
         .padding()
         
     }
@@ -65,39 +66,5 @@ struct HomeView_Previews: PreviewProvider {
     }
 }
 
-struct HomeSearchBarView: View {
-    @State private var searchText = ""
-    
-    var body: some View {
-        VStack {
-            TextField("Search", text: $searchText)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
-        }
-    }
-}
-
-struct HomeCollectionView: View {
-    let items = (1...10).map { "Item \($0)" } // Replace with your data model
-    
-    var body: some View {
-        ScrollView {
-            LazyVGrid(columns: [
-                GridItem(.flexible(), spacing: 10),
-                GridItem(.flexible(), spacing: 10)
-            ], spacing: 10) {
-                ForEach(items, id: \.self) { item in
-                    Text(item)
-                        .padding()
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
-                }
-            }
-            .padding()
-        }
-    }
-}
 
 
