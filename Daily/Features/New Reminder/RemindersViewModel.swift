@@ -15,6 +15,8 @@ class RemindersViewModel: ObservableObject {
     @Published var reminders: [String] = []
     var cancellables = Set<AnyCancellable>()
     
+    // MARK: Constrctuor
+    
     init() {
         fetchReminders()
     }

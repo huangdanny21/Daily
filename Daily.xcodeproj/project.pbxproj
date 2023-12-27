@@ -41,6 +41,8 @@
 		B50328792B3A5BAA007526D6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50328782B3A5BAA007526D6 /* LoginView.swift */; };
 		B503287C2B3A5EEC007526D6 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503287B2B3A5EEC007526D6 /* SignUpView.swift */; };
 		B503287E2B3A61B9007526D6 /* RemindersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503287D2B3A61B9007526D6 /* RemindersViewModel.swift */; };
+		B51664B72B3CE4D700B99A65 /* TaskEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51664B62B3CE4D700B99A65 /* TaskEditorView.swift */; };
+		B51664B92B3CE8C900B99A65 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51664B82B3CE8C900B99A65 /* TaskListViewModel.swift */; };
 		B5C095FC2B36B233000EBB72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C095FB2B36B233000EBB72 /* AppDelegate.swift */; };
 		B5C095FE2B36B233000EBB72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C095FD2B36B233000EBB72 /* SceneDelegate.swift */; };
 		B5C096002B36B233000EBB72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C095FF2B36B233000EBB72 /* ViewController.swift */; };
@@ -53,7 +55,7 @@
 		B5C0962F2B36B300000EBB72 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C0962E2B36B300000EBB72 /* HomeView.swift */; };
 		B5C096332B36B708000EBB72 /* ListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C096322B36B708000EBB72 /* ListDetailView.swift */; };
 		B5C096362B36B86E000EBB72 /* NewReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C096352B36B86E000EBB72 /* NewReminderView.swift */; };
-		B5F61D432B3815E80045F133 /* DailyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F61D422B3815E80045F133 /* DailyTask.swift */; };
+		B5F61D432B3815E80045F133 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F61D422B3815E80045F133 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		B50328782B3A5BAA007526D6 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B503287B2B3A5EEC007526D6 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		B503287D2B3A61B9007526D6 /* RemindersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersViewModel.swift; sourceTree = "<group>"; };
+		B51664B62B3CE4D700B99A65 /* TaskEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditorView.swift; sourceTree = "<group>"; };
+		B51664B82B3CE8C900B99A65 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
 		B5C095F82B36B233000EBB72 /* Daily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C095FB2B36B233000EBB72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5C095FD2B36B233000EBB72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,7 +101,7 @@
 		B5C0962E2B36B300000EBB72 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B5C096322B36B708000EBB72 /* ListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailView.swift; sourceTree = "<group>"; };
 		B5C096352B36B86E000EBB72 /* NewReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReminderView.swift; sourceTree = "<group>"; };
-		B5F61D422B3815E80045F133 /* DailyTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTask.swift; sourceTree = "<group>"; };
+		B5F61D422B3815E80045F133 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,15 @@
 			path = "Sign Up";
 			sourceTree = "<group>";
 		};
+		B51664B52B3CE3E700B99A65 /* Task Editor */ = {
+			isa = PBXGroup;
+			children = (
+				B51664B62B3CE4D700B99A65 /* TaskEditorView.swift */,
+				B51664B82B3CE8C900B99A65 /* TaskListViewModel.swift */,
+			);
+			path = "Task Editor";
+			sourceTree = "<group>";
+		};
 		B5C095EF2B36B233000EBB72 = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +258,7 @@
 		B5C096302B36B6F4000EBB72 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				B51664B52B3CE3E700B99A65 /* Task Editor */,
 				B503287A2B3A5EAB007526D6 /* Sign Up */,
 				B50328772B3A5B67007526D6 /* Login */,
 				B5C096342B36B85E000EBB72 /* New Reminder */,
@@ -273,7 +287,7 @@
 		B5F61D412B3815BF0045F133 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B5F61D422B3815E80045F133 /* DailyTask.swift */,
+				B5F61D422B3815E80045F133 /* Task.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -442,14 +456,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B51664B72B3CE4D700B99A65 /* TaskEditorView.swift in Sources */,
 				B50328722B3A4A29007526D6 /* HomeTableView.swift in Sources */,
+				B51664B92B3CE8C900B99A65 /* TaskListViewModel.swift in Sources */,
 				B5C096002B36B233000EBB72 /* ViewController.swift in Sources */,
 				B5C0962F2B36B300000EBB72 /* HomeView.swift in Sources */,
 				B5C096332B36B708000EBB72 /* ListDetailView.swift in Sources */,
 				B5C096362B36B86E000EBB72 /* NewReminderView.swift in Sources */,
 				B50328762B3A5204007526D6 /* HomeSearchBarView.swift in Sources */,
 				B50328792B3A5BAA007526D6 /* LoginView.swift in Sources */,
-				B5F61D432B3815E80045F133 /* DailyTask.swift in Sources */,
+				B5F61D432B3815E80045F133 /* Task.swift in Sources */,
 				B503287C2B3A5EEC007526D6 /* SignUpView.swift in Sources */,
 				B5C095FC2B36B233000EBB72 /* AppDelegate.swift in Sources */,
 				B5C095FE2B36B233000EBB72 /* SceneDelegate.swift in Sources */,
