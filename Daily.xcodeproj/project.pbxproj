@@ -43,6 +43,7 @@
 		B503287E2B3A61B9007526D6 /* RemindersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503287D2B3A61B9007526D6 /* RemindersViewModel.swift */; };
 		B51664B72B3CE4D700B99A65 /* TaskEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51664B62B3CE4D700B99A65 /* TaskEditorView.swift */; };
 		B51664B92B3CE8C900B99A65 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51664B82B3CE8C900B99A65 /* TaskListViewModel.swift */; };
+		B51664BB2B3CEF6200B99A65 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51664BA2B3CEF6200B99A65 /* AuthView.swift */; };
 		B5C095FC2B36B233000EBB72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C095FB2B36B233000EBB72 /* AppDelegate.swift */; };
 		B5C095FE2B36B233000EBB72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C095FD2B36B233000EBB72 /* SceneDelegate.swift */; };
 		B5C096002B36B233000EBB72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C095FF2B36B233000EBB72 /* ViewController.swift */; };
@@ -85,6 +86,7 @@
 		B503287D2B3A61B9007526D6 /* RemindersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersViewModel.swift; sourceTree = "<group>"; };
 		B51664B62B3CE4D700B99A65 /* TaskEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditorView.swift; sourceTree = "<group>"; };
 		B51664B82B3CE8C900B99A65 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
+		B51664BA2B3CEF6200B99A65 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		B5C095F82B36B233000EBB72 /* Daily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Daily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C095FB2B36B233000EBB72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5C095FD2B36B233000EBB72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				B50328712B3A4A29007526D6 /* HomeTableView.swift */,
 				B50328732B3A51E1007526D6 /* HomeCollectionView.swift */,
 				B50328752B3A5204007526D6 /* HomeSearchBarView.swift */,
+				B51664BA2B3CEF6200B99A65 /* AuthView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				B5C096002B36B233000EBB72 /* ViewController.swift in Sources */,
 				B5C0962F2B36B300000EBB72 /* HomeView.swift in Sources */,
 				B5C096332B36B708000EBB72 /* ListDetailView.swift in Sources */,
+				B51664BB2B3CEF6200B99A65 /* AuthView.swift in Sources */,
 				B5C096362B36B86E000EBB72 /* NewReminderView.swift in Sources */,
 				B50328762B3A5204007526D6 /* HomeSearchBarView.swift in Sources */,
 				B50328792B3A5BAA007526D6 /* LoginView.swift in Sources */,

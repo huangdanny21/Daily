@@ -14,8 +14,10 @@ enum HomeSections {
 }
 
 struct HomeView: View {
+    // MARK: Variables
     @State private var showNewReminder = false
     @ObservedObject var remindersViewModel: RemindersViewModel // Assuming you have a RemindersManager to manage reminders
+    
     var body: some View {
         VStack {
             Spacer()
